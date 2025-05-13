@@ -19,6 +19,8 @@ if uploaded_file:
 
     # Continue with preprocessing, model training, etc.
     if st.button("Train Model"):
+        print("Columns in dataset:", data.columns)
+
         # Assuming 'label' is the target
         X = data.drop("label", axis=1)
         y = data["label"]
